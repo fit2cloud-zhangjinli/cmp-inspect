@@ -1,0 +1,82 @@
+1、配置文件json格式，通过键值对描述主机信息
+2、定义执行的command参数
+3、编写html报告模板，确定变量以及巡检的内容
+4、编写各个巡检任务，将获取的值添加到字典
+5、使用jinja2渲染模板
+6、编写住程序获取命令行参数，通过参数执行对应方法
+
+
+1. 报告的模版（巡检任务），检查项，自动化检测任务
+2. 执行巡检任务，出报告
+
+1、nginx  mysql  中间件信息
+2、端口连通性检查
+
+
+Usage:
+bodycheck -env north -appsystem cloudexplorer --outpath=/opt/reports
+
+bodycheck -env north-js -appsystem jumpserver --outpath=/opt/reports
+
+
+-env north
+
+env
+- cloudexplorer
+  - north.json
+  - north-dev.json
+
+cloudexplorer-north.json
+{
+   "appserver":[
+     {
+        "servername":"app1",
+  "ip"
+  'sshRootPassword': "";
+     },
+  {
+
+  }
+
+   ],
+   "appserver":{
+
+   },
+
+}
+
+
+云管north环境巡检报告    JSON
+
+AppServer1巡检
+- System巡检
+  - CPU使用率  20%  正常
+  - CPU 1 loadage
+  - CPU 5 loadage
+  - 内存使用率  20%  正常
+  - CPU使用率  20%  正常
+  - CPU使用率  20%  正常
+- 应用巡检
+  - vm-servcie   正常
+  - dashboard   正常
+  - vm-servcie   正常
+  - vm-servcie   正常
+
+应用服务巡检
+MySQL
+- 运行状态 On  正常
+- 磁盘使用率
+- 当前连接数
+
+Redis
+- 磁盘使用率
+- 缓存使用量
+- 缓存使用率
+
+
+
+
+
+业务数据
+- 云账号  10个
+- 虚拟机  2000
